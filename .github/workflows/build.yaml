@@ -10,7 +10,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor | tr '[:upper:]' '[:lower:]' }}
+          username: ${{ github.actor | lower }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Check out repository code
         uses: actions/checkout@v4
