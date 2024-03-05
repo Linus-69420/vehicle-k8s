@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is building Docker images 🚀
 on: [push]
 jobs:
   build-images:
+    permissions: write-all
     runs-on: ubuntu-22.04
     steps:
       - name: Check out repository code
